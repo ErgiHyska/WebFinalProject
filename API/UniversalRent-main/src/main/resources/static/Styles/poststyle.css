@@ -1,0 +1,178 @@
+/* Resetting default margin and padding */
+
+body,
+h1,
+h2,
+p,
+input,
+label,
+form {
+    padding: 0;
+}
+
+body {
+    font-family: 'Arial', sans-serif;
+}
+
+
+/* Setting a common font size and family for headings and paragraphs */
+
+h2 {
+    font-size: 35px;
+}
+
+h1,
+p,
+label {
+    font-size: 18px;
+    font-family: 'YourNewFont', sans-serif;
+    margin: 5;
+    color: rgb(51, 76, 177);
+}
+
+
+/* Specific style for the "Post a car for rent" heading */
+
+#pfr {
+    color: rgb(51, 76, 177);
+}
+
+
+/* Styling for the home section */
+
+.home {
+    display: contents;
+    justify-content: center;
+    align-items: center;
+    height: 50vh;
+    width: 100%;
+    background: url(../photo/back1.png);
+}
+
+
+/* Styling for the form container */
+
+.form_container {
+    background-color: #fff;
+    border: 1px solid #ddd;
+    padding: 100px;
+    border-radius: 50px;
+    max-width: 600px;
+    margin: 0 center;
+    text-align: center;
+    background-color: #57555552;
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+
+/* Styling for form elements */
+
+form {
+    display: flex;
+    flex-direction: column;
+}
+
+input,
+button,
+input[type="file"] {
+    margin-bottom: 10px;
+    padding: 10px;
+    border: 1px solid #000000;
+    border-radius: 12px;
+    background-color: #ffffff;
+    color: #000000;
+    cursor: pointer;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+#myButton {
+    padding: 5px 50px;
+    background-color: rgb(51, 76, 177);
+    /* Blue background color */
+    color: white;
+    border: none;
+    border-radius: 100px;
+    cursor: pointer;
+    font-size: 50px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    transition: background-color 0.3s ease;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+#myButton:hover {
+    background-color: black;
+}
+
+#myButton:active {
+    /* Styles when the button is clicked */
+    background-color: black;
+}
+
+
+/* Add some margin to the button */
+
+#myButton-container {
+    margin: 20px;
+}
+
+
+/* Styling for labels */
+
+label {
+    margin-bottom: 5px;
+}
+
+
+/* Styling for radio buttons and date options */
+
+.dateOptions {
+    margin-top: 20px;
+    color: rgb(51, 76, 177);
+}
+
+input[type="radio"] {
+    display: 5px;
+}
+
+label {
+    position: relative;
+    color: rgb(51, 76, 177);
+    font-family: 'Poppins', sans-serif;
+    font-size: 15px;
+    border: 2px solid #000000;
+    border-radius: 500px;
+    padding: 10px 60px;
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+}
+
+
+/* Styling for the start and end date form, initially hidden */
+
+#startEndDateForm {
+    margin-top: 10px;
+    display: none;
+}
+
+
+/* Styling for buttons on hover */
+
+button:hover,
+input[type="file"]:hover {
+    background-color: #bdb0b0;
+    color: #113a6d48;
+}
+
+
+/* Media query for responsiveness */
+
+@media screen and (max-width: 600px) {
+    .form_container {
+        width: 90%;
+    }
+}

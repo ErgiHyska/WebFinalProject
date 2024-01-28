@@ -1,0 +1,51 @@
+[{
+        "Name": "Toyota Camry",
+        "Type": "Sedan",
+        "YearOfProduction": 2020,
+        "Transmission": "Automatic",
+        "StartDate": "2023-11-20",
+        "EndDate": "2023-11-25",
+        "PricePerDay": 50.00,
+        "ImgUrl": "https://cdntdreditorials2.azureedge.net/cache/e/6/b/a/f/8/e6baf8aa4029be4ca9f3cde11d411a9a7dfdb8a1.jpg"
+    },
+    {
+        "Name": "Ford Explorer",
+        "Type": "SUV",
+        "YearOfProduction": 2022,
+        "Transmission": "Automatic",
+        "StartDate": "2023-11-22",
+        "EndDate": "2023-11-27",
+        "PricePerDay": 65.00,
+        "ImgUrl": "https://i.gaw.to/content/photos/48/50/485037-ford-explorer-st-line-2022-l-apparence-avant-la-performance.jpeg"
+    },
+    {
+        "Name": "Honda Civic",
+        "Type": "Compact",
+        "YearOfProduction": 2021,
+        "Transmission": "Manual",
+        "StartDate": "2023-11-23",
+        "EndDate": "2023-11-28",
+        "PricePerDay": 45.00,
+        "ImgUrl": "https://carsguide-res.cloudinary.com/image/upload/f_auto%2Cfl_lossy%2Cq_auto%2Ct_default/v1/editorial/segment_review/thumbnail/2021-honda-civic-RS-sedan-1001x565p-1.jpg"
+    },
+    {
+        "Name": "Chevrolet Tahoe",
+        "Type": "SUV",
+        "YearOfProduction": 2022,
+        "Transmission": "Automatic",
+        "StartDate": "2023-11-25",
+        "EndDate": "2023-11-30",
+        "PricePerDay": 80.00,
+        "ImgUrl": "https://cdn.jdpower.com/JDPA_2021%20Chevrolet%20Tahoe%20Z71%20Shadow%20Gray%20Front%20View.jpg"
+    },
+    {
+        "Name": "BMW 3 Series",
+        "Type": "Luxury",
+        "YearOfProduction": 2023,
+        "Transmission": "Automatic",
+        "StartDate": "2023-11-27",
+        "EndDate": "2023-12-02",
+        "PricePerDay": 120.00,
+        "ImgUrl": "https://images.ctfassets.net/c9t6u0qhbv9e/2021BMW3SeriesTestDriveReviewsummary/95042a4c746b62e17e8216d2c36ede20/2021_BMW_3_Series_Test_Drive_Review_summaryImage.jpeg"
+    }
+]

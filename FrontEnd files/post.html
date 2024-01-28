@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="Assets/Styles/poststyle.css" />
+    <title>Post a car for rent</title>
+    <link rel="stylesheet" href="Assets/Styles/styles.css" />
+</head>
+
+<body>
+    <!--Header-->
+    <header>
+        <a href="#" class="logo"><img src="Assets/photo/banner.png" alt=""></a>
+        <div class="bx bx-menu" id="menu-icon"></div>
+        <ul class="navbar">
+            <li><a href="index.html">Go Home</a></li>
+            <li><a href="showroom.html">Search</a></li>
+        </ul>
+        <div class="header-btn">
+            <a href="post.html" class="postcar">Post a car for rent</a>
+            <a href="signup.html" class="sign-up">Sign Up</a>
+            <a href="login.html" class="sign-in">Log-in</a>
+        </div>
+    </header>
+    <section class="home">
+        <div class="form_container">
+            <div class="postForRent">
+                <form action="#" enctype="multipart/form-data">
+                    <h2 id="pfr">Post a car for rent</h2>
+                    <div class="input_box">
+                        <input type="text" placeholder="Enter your car model name" required /><br />
+                    </div>
+                    <div class="input_box">
+                        <input type="number" placeholder="Enter production year" required /><br />
+                    </div>
+                    <div class="input_box">
+                        <p>Upload ID document</p><input type="file" required /><br />
+                    </div>
+                    <div class="input_box">
+                        <p>Upload valid insurance document</p><input type="file" required /><br />
+                    </div>
+                    <div class="input_box">
+                        <p>Upload valid technical inspection document</p><input type="file" required /><br />
+                    </div>
+                    <div class="input_box">
+                        <p>Upload driving permit</p><input type="file" required /><br />
+                    </div>
+                    <div class="input_box">
+                        <p>Upload car ownership document</p><input type="file" required /><br />
+                    </div>
+
+                    <div class="dateOptions">
+                        <h2>Date Options</h2>
+                        <div class="input_box">
+                            <label>
+                                <input type="radio" name="date_option" value="negotiable" checked />
+                                Negotiable Date
+                            </label>
+                        </div>
+                        <div class="input_box">
+                            <label>
+                                <input type="radio" name="date_option" value="start_end" />
+                                Start and End Date
+                            </label>
+                        </div>
+                        <div id="startEndDateForm" style="display:none;">
+                            <div class="input_box">
+                                <label>Start Date:</label>
+                                <input type="date" name="start_date" />
+                            </div>
+                            <div class="input_box">
+                                <label>End Date:</label>
+                                <input type="date" name="end_date" />
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="input_box">
+                        <button id="myButton">Click me</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            var dateOptionRadios = document.querySelectorAll('input[name="date_option"]');
+            var startEndDateForm = document.getElementById('startEndDateForm');
+
+            function toggleStartEndDateForm() {
+                startEndDateForm.style.display = dateOptionRadios[1].checked ? 'block' : 'none';
+            }
+            toggleStartEndDateForm();
+
+            dateOptionRadios.forEach(function(radio) {
+                radio.addEventListener('change', toggleStartEndDateForm);
+            });
+        });
+    </script>
+
+</body>
+
+</html>

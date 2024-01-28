@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="../static/Styles/showroomstyles.css">
+    <title>Your Page Title</title>
+</head>
+
+<body>
+
+
+    <nav>
+
+
+        <form>
+            <input type="text" placeholder="Search by model, brand, etc...">
+            <select name="sort" placeholder="Sort by">
+          
+        <option value="year">Sort by Year</option>
+        <option value="noOfDays">Sort by Number of days available</option>
+      </select>
+            <select name="transmission" placeholder="Select Transmission">
+        <option value="manual">Manual Transmission</option>
+        <option value="automatic">Automatic Transmission</option>
+      </select>
+            <select name="type" placeholder="Select Type">
+        <option value="SUV">SUV</option>
+        <option value="compact">Compact</option>
+        <option value="sedan">Sedan</option>
+        <option value="hatchback">Hatchback</option>
+        <option value="motorbike">Motorbike</option>
+      </select>
+            <select name="engineSize" placeholder="Select Engine Size">
+        <option value="1-2">1.0L - 2.0L</option>
+        <option value="2-4">2.1L - 4.0L</option>
+        <option value="4+">4.1L and above</option>
+      </select>
+            <select name="engineType" placeholder="Select Engine Type">
+        <option value="gasoline">Gasoline</option>
+        <option value="diesel">Diesel</option>
+        <option value="electric">Electric</option>
+      </select>
+            <button type="submit">Search</button>
+        </form>
+    </nav>
+
+    <section class="services" id="services">
+        <div class="services-container" id="latest5"></div>
+    </section>
+
+    <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
+    <script>
+        const apiUrl = 'http://localhost:80/latestcars.json';
+
+        fetch(apiUrl)
+            .then(response => {
+                if (!response.ok) {
+                    throw new Error(`HTTP error! Status: ${response.status}`);
+                }
+                return response.json();
+            })
+            .then(data => {
+                $(document).ready(function() {
+                    data.forEach(car => {
+                        var newBox = $("<div class='box'></div>");
+                        var boxImg = $("<div class='box-img'></div>").append("<img src=" + car.ImgUrl + " alt=''>");
+                        var p3 = $("<p3>" + car.YearOfProduction + "</p3>");
+                        var h3 = $("<h3>" + car.Name + "</h3>");
+                        var h2 = $("<h2>" + car.PricePerDay + "<span>$/day</span></h2>");
+                        var link = $("<a href='#' class='btn'>Rent Now</a>");
+                        newBox.append(boxImg, p3, h3, h2, link);
+                        $("#latest5").append(newBox);
+                    });
+                });
+            })
+            .catch(error => {
+                console.error('Error during fetch:', error.message);
+            });
+    </script>
+
+</body>
+
+</html>
